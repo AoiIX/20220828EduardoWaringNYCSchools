@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><!--Linear layout as the root layout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Tab widget to select the tab -->
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- FrameLayout which contains the data of the activity -->
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- for tab 1 -->
+                <LinearLayout
+                    android:id="@+id/tabDetails"
+                    android:text="Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/tab_school_details"/>
+
+                </LinearLayout>
+
+                <!-- for tab 2 -->
+                <LinearLayout
+                    android:id="@+id/tabAddress"
+                    android:text="Address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/tab_school_address"/>
+
+                </LinearLayout>
+
+                <!-- for tab 3 -->
+                <LinearLayout
+                    android:id="@+id/tabContact"
+                    android:text="Contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/tab_school_contact"/>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
